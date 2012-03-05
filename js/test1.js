@@ -1,29 +1,39 @@
 $(document).ready( function(){
 	//$('#Overlay1Div').overlay().close();
-	$('h1').css("color","blue");
-	//$('#click1Btn').click( function() {
+	$('h3').css("color","blue");
+
 	
-	$('#Overlay1Div').overlay({
+	$('#overlayDiv1').overlay({
 		// custom top position
 		top: 260,
-		// some mask tweaks suitable for facebox-looking dialogs
 		mask: {
-
-			// you might also consider a "transparent" color for the mask
 			color: '#f22',
-
-			// load mask a little faster
 			loadSpeed: 200,
-
-			// very transparent
 			opacity: 0.5
 		},
-
-		// disable this for modal dialog-type of overlays
 		closeOnClick: false,
-
-		// load it immediately after the construction
-		load: true	
+		load: false	
 
 	});
+	
+	$('#overlayDiv2').overlay({
+		top: 260,
+		mask: {
+			color: '#f22',
+			loadSpeed: 200,
+			opacity: 0.5
+		},
+		closeOnClick: false,
+		load: false	
+
+	});
+	
+	$('#button1').click( function() {
+		('#OverlayDiv1').overlay().load();
+	})
+	
+	$('#button2').click( function() {
+		('#OverlayDiv2').overlay().load();
+	})
+	
 });

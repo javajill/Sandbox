@@ -1,63 +1,46 @@
-$(document).ready( function(){
+$(document).ready(function() {
 	//$('#Overlay1Div').overlay().close();
-	$('h1').css("color","blue");
-	$('#Button1').click( function() {
-		alert('Hey');
-		$('#Overlay1Div2').load();
-	});
+	$('h3').css("color", "blue");
 
-	$('#OverlayDiv1').overlay( {
-		oneInstance: false, 
+	$('#overlayDiv1').overlay({
 		// custom top position
-		top: 100,
-		left: 100,
-		zIndex: 10100,
-		// some mask tweaks suitable for facebox-looking dialogs
-		mask: {
-
-			// you might also consider a "transparent" color for the mask
-			color: '#222',
-
-			// load mask a little faster
-			loadSpeed: 200,
-
-			// very transparent
-			opacity: 0.0
+		top : 260,
+		left : 100,
+		mask : {
+			color : '#000',
+			loadSpeed : 200,
+			opacity : 0.5
 		},
-
-		// disable this for modal dialog-type of overlays
-		closeOnClick: false,
-
-		// load it immediately after the construction
-		load: false	
+		closeOnClick : false,
+		load : false
 
 	});
-	
-		$('#OverlayDiv2').overlay({
-			oneInstance: false, 
-		// custom top position
-		top: 130,
-		left: 200,
-		zIndex: 10500,
-		// some mask tweaks suitable for facebox-looking dialogs
-		mask: {
 
-			// you might also consider a "transparent" color for the mask
-			color: '#222',
-
-			// load mask a little faster
-			loadSpeed: 200,
-
-			// very transparent
-			opacity: 0.0
+	$('#overlayDiv2').overlay({
+		top : 400,
+		left : 200,
+		mask : {
+			color : '#000',
+			loadSpeed : 200,
+			opacity : 0.5
 		},
-
-		// disable this for modal dialog-type of overlays
-		closeOnClick: false,
-
-		// load it immediately after the construction
-		load: true	
+		closeOnClick : false,
+		load : false
 
 	});
-	
+
+	$('#button1').click(function(e) {
+		$('#overlayDiv1').overlay().load();
+		e.preventDefault();
+		e.stopPropagation();
+		return false;
+	})
+
+	$('#button2').click(function(e) {
+		// $('#overlayDiv1').overlay().close();
+		$('#overlayDiv2').overlay().load();
+		e.preventDefault();
+		e.stopPropagation();
+		return false;
+	})
 });
