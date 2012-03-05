@@ -4,12 +4,15 @@ $(document).ready(function() {
 
 	$('#overlayDiv1').overlay({
 		// custom top position
-		top : 260,
+		top : 100,
 		left : 100,
+		zIndex : 1001,
 		mask : {
 			color : '#000',
 			loadSpeed : 200,
-			opacity : 0.5
+			opacity : 0.5,
+			zIndex : 1000,
+			oneInstance : false,
 		},
 		closeOnClick : false,
 		load : false
@@ -17,12 +20,15 @@ $(document).ready(function() {
 	});
 
 	$('#overlayDiv2').overlay({
-		top : 400,
+		top : 200,
 		left : 200,
+		zIndex : 2001,
+		oneInstance : false,
 		mask : {
 			color : '#000',
 			loadSpeed : 200,
-			opacity : 0.5
+			opacity : 0.5,
+			zIndex : 2000
 		},
 		closeOnClick : false,
 		load : false
@@ -31,16 +37,30 @@ $(document).ready(function() {
 
 	$('#button1').click(function(e) {
 		$('#overlayDiv1').overlay().load();
+		//$('#overlayDiv2').overlay().load();
 		e.preventDefault();
 		e.stopPropagation();
 		return false;
 	})
 
+	$('#overlayCloseButton1').click(function(e) {
+		$('#overlayDiv1').overlay().close();
+		e.preventDefault();
+		e.stopPropagation();
+
+	});
+
 	$('#button2').click(function(e) {
-		// $('#overlayDiv1').overlay().close();
 		$('#overlayDiv2').overlay().load();
 		e.preventDefault();
 		e.stopPropagation();
 		return false;
 	})
+
+	$('#overlayCloseButton2').click(function(e) {
+		$('#overlayDiv2').overlay().close();
+		e.preventDefault();
+		e.stopPropagation();
+
+	});
 });
