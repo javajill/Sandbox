@@ -8,7 +8,7 @@ $(document).ready(function(){
         $(this).addClass("active");
  
         //  Hide all tab content
-        $(".tab_content").hide();
+         $(".tab_content").hide();
  
         //  Here we get the href value of the selected tab
         var selected_tab = $(this).find("a").attr("href");
