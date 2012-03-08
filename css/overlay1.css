@@ -9,7 +9,7 @@
 		border:10px solid #626;
 
 		/* for modern browsers use semi-transparent color on the border. nice! */
-		border:10px solid rgba(82, 22, 82, 0.698);
+		border:2px solid rgba(82, 22, 82, 0.698);
 
 		/* hot CSS3 features for mozilla and webkit-based browsers (rounded borders) */
 		-moz-border-radius:8px;
@@ -18,11 +18,15 @@
 
 	.overlay div {
 		padding:10px;
-		border:1px solid #3B5998;
-		background-color:#fff;
-		font-family:"lucida grande",tahoma,verdana,arial,sans-serif
+		font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+		background-color: #eeeeee;
 	}
 
+
+	#overlayDiv1, #overlayDiv2 {
+		background-color: #ccddff;
+		
+	}
 	.overlay h2 {
 		margin:-11px;
 		margin-bottom:0px;
@@ -33,10 +37,10 @@
 		font-size:20px;
 	}
 
-	#Overlay1Div {
-		background-color: #3B5998;
+	#OverlayDiv1 {
+		background-color: #ddeeff;
 	}
 
-	#Overlay2Div {
-		background-color: #662266;
+	#OverlayDiv2 {
+		background-color: #eeeeff;
 	}
