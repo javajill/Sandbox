@@ -11,7 +11,7 @@
     font: 0.75em arial;
 }
 #tabs li {
-    display: inline;
+    display:  inline;
 }
 #tabs li a {
     border: 1px solid #ccc;
