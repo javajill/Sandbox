@@ -7,12 +7,12 @@ $(document).ready(function() {
 		top : 100,
 		left : 100,
 		zIndex : 1001,
+		//oneInstance : false,
 		mask : {
 			color : '#000',
 			loadSpeed : 200,
 			opacity : 0.5,
 			zIndex : 1000,
-			oneInstance : false,
 		},
 		closeOnClick : false,
 		load : false
