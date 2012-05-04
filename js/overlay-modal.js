@@ -1,5 +1,5 @@
 $(document).ready( function(){
-
+/*
 var triggers = $(".modalInput").overlay({
 
 	// some mask tweaks suitable for modal dialogs
@@ -11,6 +11,7 @@ var triggers = $(".modalInput").overlay({
 
 	closeOnClick: false
 });
+*
 
 var buttons = $("#yesno button").click(function(e) {
 	
@@ -35,5 +36,31 @@ $("#prompt form").submit(function(e) {
 	// do not submit the form
 	return e.preventDefault();
 });
-	
+     */  
+                $("#testDiv").overlay({
+                    top: '40%',
+                    mask: {
+                        color: '#000000',
+                        opacity: 0.5
+                    },
+                    load: false,
+                    closeOnEsc: true
+                });
+
+ 
+
+
+$("#testOpenBtn").click( function() {
+    alert("open button clicked");
+    $("#testDiv").data("overlay").load()
+    
+});
+
+$("#testCloseBtn").click( function() {
+    alert("close button clicked");
+    $("#testDiv").overlay().close();
+    alert("overlay should be closed");
+    
+});
+
 });
